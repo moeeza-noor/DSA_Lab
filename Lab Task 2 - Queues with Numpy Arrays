@@ -1,134 +1,59 @@
-{
-  "nbformat": 4,
-  "nbformat_minor": 0,
-  "metadata": {
-    "colab": {
-      "name": "Untitled2.ipynb",
-      "provenance": [],
-      "authorship_tag": "ABX9TyOyDKmDoR8lVIA9GgON7qc6",
-      "include_colab_link": true
-    },
-    "kernelspec": {
-      "name": "python3",
-      "display_name": "Python 3"
-    },
-    "language_info": {
-      "name": "python"
-    }
-  },
-  "cells": [
-    {
-      "cell_type": "markdown",
-      "metadata": {
-        "id": "view-in-github",
-        "colab_type": "text"
-      },
-      "source": [
-        "<a href=\"https://colab.research.google.com/github/moeeza-noor/DSA_Lab/blob/main/Lab%20Task%202%20-%20Queues%20with%20Numpy%20Arrays\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
-      ]
-    },
-    {
-      "cell_type": "code",
-      "metadata": {
-        "colab": {
-          "base_uri": "https://localhost:8080/",
-          "height": 350
-        },
-        "id": "jlXAdsHofToc",
-        "outputId": "433b0653-cfac-4474-9e57-c7642a012551"
-      },
-      "source": [
-        "##Task 1 - Queues using numpy\n",
-        "import numpy as np\n",
-        "class queue:\n",
-        "  def _init_ (self):\n",
-        "    self.list=np.array(5)\n",
-        "  def enqueue(self, data):\n",
-        "    arr=np.append(self, data)\n",
-        "    return arr\n",
-        "  def dequeue(self):\n",
-        "    arr=np.delete(self.list,1)\n",
-        "    return arr\n",
-        "  def front(self):\n",
-        "    arr=self.list[0]\n",
-        "    return arr\n",
-        "  def rear(self):\n",
-        "    arr=self.list[-1]\n",
-        "    return arr\n",
-        "  def length(self):\n",
-        "    arr=len(self.list)\n",
-        "    return arr\n",
-        "  def size(self):\n",
-        "    arr=(len(self.list>5))\n",
-        "    return arr\n",
-        "  def isEmpty(self):\n",
-        "    arr=(len(selflist)==0)\n",
-        "    return arr\n",
-        "\n",
-        "q=queue()\n",
-        "q.enqueue(12)\n",
-        "q.enqueue(24)\n",
-        "print(q)\n",
-        "q.dequeue()\n",
-        "print(q)"
-      ],
-      "execution_count": 13,
-      "outputs": [
-        {
-          "output_type": "stream",
-          "name": "stdout",
-          "text": [
-            "<__main__.queue object at 0x7ff012078750>\n"
-          ]
-        },
-        {
-          "output_type": "error",
-          "ename": "AttributeError",
-          "evalue": "ignored",
-          "traceback": [
-            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
-            "\u001b[0;31mAttributeError\u001b[0m                            Traceback (most recent call last)",
-            "\u001b[0;32m<ipython-input-13-f62ab15ff6bc>\u001b[0m in \u001b[0;36m<module>\u001b[0;34m()\u001b[0m\n\u001b[1;32m     29\u001b[0m \u001b[0mq\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0menqueue\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;36m34\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m     30\u001b[0m \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mq\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m---> 31\u001b[0;31m \u001b[0mq\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mdequeue\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m     32\u001b[0m \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mq\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
-            "\u001b[0;32m<ipython-input-13-f62ab15ff6bc>\u001b[0m in \u001b[0;36mdequeue\u001b[0;34m(self)\u001b[0m\n\u001b[1;32m      7\u001b[0m     \u001b[0;32mreturn\u001b[0m \u001b[0marr\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      8\u001b[0m   \u001b[0;32mdef\u001b[0m \u001b[0mdequeue\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mself\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 9\u001b[0;31m     \u001b[0marr\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0mnp\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mdelete\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mlist\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;36m1\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m     10\u001b[0m     \u001b[0;32mreturn\u001b[0m \u001b[0marr\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m     11\u001b[0m   \u001b[0;32mdef\u001b[0m \u001b[0mfront\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mself\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
-            "\u001b[0;31mAttributeError\u001b[0m: 'queue' object has no attribute 'list'"
-          ]
-        }
-      ]
-    },
-    {
-      "cell_type": "code",
-      "metadata": {
-        "id": "Jp-jV8NAfajD"
-      },
-      "source": [
-        "##Task 2 \n",
-        "from collections import deque\n",
-        "class Deque:\n",
-        "    def __init__(self):\n",
-        "        self.items = []\n",
-        "    def isEmpty(self):\n",
-        "        arr=self.items == []\n",
-        "        return arr\n",
-        "    def addRear(self, item):\n",
-        "        arr=self.items.append(item)\n",
-        "        return arr\n",
-        "    def addFront(self, item):\n",
-        "        arr=self.items.insert(0, item)\n",
-        "        return arr\n",
-        "    def removeFront(self):\n",
-        "        arr=self.items.pop(0)\n",
-        "        return arr\n",
-        "    def removeRear(self):\n",
-        "        arr=self.items.pop()\n",
-        "        return arr\n",
-        "    def size(self):\n",
-        "        return len(self.items)\n",
-        "def main():\n",
-        "  q=Queue()\n",
-        "  print(q)"
-      ],
-      "execution_count": 17,
-      "outputs": []
-    }
-  ]
-}
+##Task 1 - Queues using numpy
+import numpy as np
+class queue:
+  def _init_ (self):
+    self.list=np.array(5)
+  def enqueue(self, data):
+    arr=np.append(self, data)
+    return arr
+  def dequeue(self):
+    arr=np.delete(self.list,1)
+    return arr
+  def front(self):
+    arr=self.list[0]
+    return arr
+  def rear(self):
+    arr=self.list[-1]
+    return arr
+  def length(self):
+    arr=len(self.list)
+    return arr
+  def size(self):
+    arr=(len(self.list>5))
+    return arr
+  def isEmpty(self):
+    arr=(len(selflist)==0)
+    return arr
+
+q=queue()
+q.enqueue(12)
+q.enqueue(24)
+print(q)
+q.dequeue()
+print(q)
+
+##Task 2 
+from collections import deque
+class Deque:
+    def __init__(self):
+        self.items = []
+    def isEmpty(self):
+        arr=self.items == []
+        return arr
+    def addRear(self, item):
+        arr=self.items.append(item)
+        return arr
+    def addFront(self, item):
+        arr=self.items.insert(0, item)
+        return arr
+    def removeFront(self):
+        arr=self.items.pop(0)
+        return arr
+    def removeRear(self):
+        arr=self.items.pop()
+        return arr
+    def size(self):
+        return len(self.items)
+def main():
+  q=Queue()
+  print(q)
